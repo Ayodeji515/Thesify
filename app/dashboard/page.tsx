@@ -14,6 +14,7 @@ import {
   GraduationCap
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { StatusBadge } from '@/components/ui/StatusBadge';
 import { Project } from '@/lib/types';
 import { getLocalProjects } from '@/lib/storage';
@@ -56,8 +57,10 @@ export default function DashboardPage() {
   });
 
   return (
-    <div className="py-8 bg-slate-50 min-h-[calc(100vh-14rem)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div className="py-6 sm:py-8 bg-slate-50 min-h-[calc(100vh-14rem)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <Breadcrumbs items={[{ label: 'Student Portal', current: true }]} />
+
         {/* Welcome Section */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-6 rounded border border-slate-200 shadow-sm">
           <div className="space-y-1">

@@ -1,0 +1,17 @@
+{
+  "name": "Thesify — Academic Research Data Analysis",
+  "short_name": "Thesify",
+  "description": "Managed quantitative research data analysis and Chapter Four validation platform for Nigerian university students.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

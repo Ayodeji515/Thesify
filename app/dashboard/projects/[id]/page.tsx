@@ -19,6 +19,7 @@ import {
   GraduationCap
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { StatusBadge } from '@/components/ui/StatusBadge';
 import { Project, ProjectStatus } from '@/lib/types';
 import { getLocalProjectById, saveLocalProject } from '@/lib/storage';
@@ -123,15 +124,22 @@ export default function ProjectDetailsPage() {
   const currentStepIndex = workflowSteps.findIndex((s) => s.label === project.status);
 
   return (
-    <div className="py-8 bg-slate-50 min-h-[calc(100vh-14rem)]">
+    <div className="py-6 sm:py-8 bg-slate-50 min-h-[calc(100vh-14rem)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <Breadcrumbs
+          items={[
+            { label: 'Student Portal', href: '/dashboard' },
+            { label: project.title, current: true },
+          ]}
+        />
+
         {/* Top Navigation */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <Link
             href="/dashboard"
             className="inline-flex items-center text-xs text-slate-500 hover:text-slate-800 space-x-1"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Return to dashboard</span>
           </Link>
           <div className="flex items-center space-x-2">
@@ -362,7 +370,7 @@ export default function ProjectDetailsPage() {
               )}
             </div>
 
-            {/* Analysis & Chapter Four Placeholder Card */}
+            {/* Analysis & Chapter Four Deliverables Card */}
             <div className="bg-white p-6 rounded border border-slate-200 shadow-sm space-y-3">
               <div className="flex items-center space-x-2 border-b border-slate-100 pb-2">
                 <BarChart2 className="w-4 h-4 text-slate-500" />
@@ -380,7 +388,7 @@ export default function ProjectDetailsPage() {
                 <div className="bg-slate-50 border border-slate-200 rounded p-4 text-xs text-slate-600 space-y-2">
                   <div className="flex items-center space-x-1.5 font-semibold text-slate-800">
                     <Info className="w-4 h-4 text-blue-600 shrink-0" />
-                    <span>Analysis in Progress Placeholder</span>
+                    <span>Awaiting Analyst Computation & Approval</span>
                   </div>
                   <p className="text-[11px] leading-relaxed text-slate-500">
                     Statistical calculations and Chapter Four draft documents will be published here once data validation is completed and approved by the assigned research analyst.

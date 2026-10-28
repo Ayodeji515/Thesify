@@ -1,0 +1,19 @@
+# Thesify Academic Research & Quantitative Analysis Platform
+> Research data analysis, made clearer. A managed quantitative analysis and validation platform for university undergraduate and postgraduate students in Nigeria.
+
+Thesify provides deterministic statistical calculations, survey data validation, hypothesis testing, and supervisor-ready Chapter Four (Data Presentation & Analysis) reporting audited by human analysts.
+
+## Platform Capabilities
+- **Survey Dataset Hygiene & Validation**: Automated validation of survey responses from CSV and Excel spreadsheets, detecting missing values, coding irregularities, Likert scale outliers, and scale reliability (Cronbach's Alpha).
+- **Hypothesis Testing**: Deterministic calculations of parametric and non-parametric tests (Independent/Paired t-Tests, One-Way ANOVA with Post-Hoc comparisons, Pearson/Spearman correlation, Multiple Linear Regression) at α = 0.05.
+- **Chapter Four Drafting**: Formatted APA tables, demographic frequency profiles, and narrative findings formatted for Nigerian university guidelines (NUC-compliant).
+- **Research Integrity**: Datasets are stored with SHA-256 cryptographic hashes and audited by human quantitative research analysts. Thesify strictly prohibits data fabrication or artificial outcome forcing.
+
+## Key Links & Resources
+- Homepage: https://thesify.ng/
+- Student Portal & Dashboard: https://thesify.ng/dashboard
+- Submit a Project: https://thesify.ng/dashboard/projects/new
+- Terms and Academic Standards: https://thesify.ng/terms
+- Privacy Policy & Data Security: https://thesify.ng/privacy
+- Full Documentation: https://thesify.ng/llms-full.txt
+- XML Sitemap: https://thesify.ng/sitemap.xml

@@ -1,0 +1,22 @@
+# Robots.txt for Thesify Academic Research Platform
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /api/
+
+# LLM scrapers and search crawlers
+User-agent: GPTBot
+Allow: /
+Disallow: /dashboard/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /dashboard/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /dashboard/
+
+# Sitemaps
+Sitemap: https://thesify.ng/sitemap.xml
+Sitemap: https://thesify.ng/sitemap-0.xml

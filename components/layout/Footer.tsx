@@ -4,13 +4,16 @@ import { BookOpen, ShieldCheck, Mail, MapPin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800">
+    <footer className="bg-slate-900 text-slate-300 border-t border-slate-800" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand & Mission */}
           <div className="space-y-4 md:col-span-1">
             <div className="flex items-center space-x-2.5">
-              <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white">
+              <div
+                className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center text-white"
+                aria-hidden="true"
+              >
                 <BookOpen className="w-4 h-4" />
               </div>
               <span className="font-bold text-lg text-white tracking-tight">Thesify</span>
@@ -19,7 +22,7 @@ export const Footer: React.FC = () => {
               Research data analysis, made clearer. A managed quantitative analysis service for undergraduate and postgraduate university research across Nigeria.
             </p>
             <div className="flex items-center space-x-2 text-xs text-slate-400">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+              <ShieldCheck className="w-4 h-4 text-emerald-400" aria-hidden="true" />
               <span>Strict Academic Integrity Standards</span>
             </div>
           </div>
@@ -84,11 +87,13 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li className="flex items-start space-x-2 text-slate-400 pt-2">
-                <Mail className="w-4 h-4 mt-0.5 text-slate-500 shrink-0" />
-                <span>support@thesify.ng</span>
+                <Mail className="w-4 h-4 mt-0.5 text-slate-500 shrink-0" aria-hidden="true" />
+                <a href="mailto:support@thesify.ng" className="hover:text-white transition-colors">
+                  support@thesify.ng
+                </a>
               </li>
               <li className="flex items-start space-x-2 text-slate-400">
-                <MapPin className="w-4 h-4 mt-0.5 text-slate-500 shrink-0" />
+                <MapPin className="w-4 h-4 mt-0.5 text-slate-500 shrink-0" aria-hidden="true" />
                 <span>Lagos / Abuja, Nigeria</span>
               </li>
             </ul>
@@ -96,7 +101,9 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 space-y-4 sm:space-y-0">
-          <p>&copy; {new Date().getFullYear()} Thesify. All rights reserved.</p>
+          <p suppressHydrationWarning>
+            &copy; {new Date().getFullYear()} Thesify. All rights reserved.
+          </p>
           <p>Designed for university research compliance and professional statistical analysis.</p>
         </div>
       </div>

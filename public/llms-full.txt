@@ -1,0 +1,36 @@
+# Thesify — Complete System & Methodology Documentation
+
+## 1. Overview
+Thesify is a managed quantitative research data analysis service designed specifically for university students, project researchers, and academic departments across Nigeria. It resolves the common bottlenecks students encounter when analyzing survey and experimental data for Chapter Four of their final year projects or postgraduate dissertations.
+
+## 2. Core Methodologies Supported
+- **Descriptive Statistics**: Frequency distributions, percentages, mean scores, standard deviations, and Likert scale decision cut-offs (e.g. 2.50 or 3.00 benchmarks).
+- **Comparative Tests**:
+  - Independent Samples t-Test (comparing two unrelated groups)
+  - Paired Samples t-Test (pre-test vs post-test designs)
+  - One-Way Analysis of Variance (ANOVA) with Tukey/Scheffe Post-Hoc tests
+- **Relational & Predictive Models**:
+  - Pearson Product-Moment Correlation (r)
+  - Spearman Rank-Order Correlation (rho)
+  - Simple and Multiple Linear Regression (R, R-squared, Adjusted R-squared, F-ratio, beta coefficients, t-values, p-values)
+  - Chi-Square Test of Independence (χ²)
+- **Scale Reliability**:
+  - Cronbach's Alpha (α) scale consistency testing (threshold > 0.70)
+
+## 3. Workflow Stages
+1. **Intake**: Student supplies research topic, numbered research questions, hypotheses, degree level, and faculty requirements.
+2. **Data Hygiene & Pre-flight**: Automated ingestion of CSV or XLSX dataset. Validates data types, identifies incomplete responses, and checks sample size sufficiency (e.g., Yamane or Cochran formula benchmarks).
+3. **Computation**: Deterministic numerical computing using Python statistical packages (SciPy, Statsmodels, Pandas).
+4. **Analyst Review**: Experienced quantitative methodologists audit model assumptions (normality, homoscedasticity, multicollinearity VIF).
+5. **Chapter Four Delivery**: An editable document (.docx format) containing APA-compliant numbered tables, statistical interpretations, and hypothesis rejection/acceptance conclusions.
+
+## 4. Academic Integrity & Ethics
+- Thesify does NOT write theoretical literature reviews (Chapter Two), fabricate survey responses, or falsify data to achieve desired p-values.
+- Non-significant findings ($p > 0.05$) are reported accurately with academic context.
+- Student data is secured with PostgreSQL Row-Level Security (RLS) and SHA-256 integrity checksums. Direct identifiers (names, phone numbers) must be removed prior to upload.
+
+## 5. Contact & Support
+- Email: support@thesify.ng
+- Privacy: privacy@thesify.ng
+- Physical Location: Lagos / Abuja, Nigeria
+- Website: https://thesify.ng

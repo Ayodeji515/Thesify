@@ -14,6 +14,7 @@ import {
   GraduationCap
 } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { Project, ResearchQuestion, Hypothesis } from '@/lib/types';
 import { saveLocalProject } from '@/lib/storage';
 
@@ -161,14 +162,21 @@ export default function NewProjectPage() {
   };
 
   return (
-    <div className="py-8 bg-slate-50 min-h-[calc(100vh-14rem)]">
+    <div className="py-6 sm:py-8 bg-slate-50 min-h-[calc(100vh-14rem)]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <Breadcrumbs
+          items={[
+            { label: 'Student Portal', href: '/dashboard' },
+            { label: 'New Project', current: true },
+          ]}
+        />
+
         <div>
           <Link
             href="/dashboard"
             className="inline-flex items-center text-xs text-slate-500 hover:text-slate-800 mb-3 space-x-1"
           >
-            <ArrowLeft className="w-3.5 h-3.5" />
+            <ArrowLeft className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Back to projects</span>
           </Link>
           <h1 className="text-2xl font-bold text-slate-900">Create New Research Project</h1>

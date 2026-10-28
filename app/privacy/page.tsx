@@ -1,34 +1,54 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Lock } from 'lucide-react';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy & Student Data Protection',
+  description:
+    'Learn how Thesify protects student research datasets, respondent anonymity, and academic project confidentiality under strict Row-Level Security.',
+  alternates: {
+    canonical: '/privacy',
+  },
+};
 
 export default function PrivacyPage() {
   return (
-    <div className="py-12 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div className="py-10 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+        <Breadcrumbs items={[{ label: 'Privacy Policy', current: true }]} />
+
         <div>
-          <Link href="/" className="inline-flex items-center text-xs text-slate-500 hover:text-slate-800 mb-4 space-x-1">
-            <ArrowLeft className="w-3.5 h-3.5" />
+          <Link
+            href="/"
+            className="inline-flex items-center text-xs text-slate-500 hover:text-slate-800 mb-3 space-x-1"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" aria-hidden="true" />
             <span>Back to home</span>
           </Link>
           <div className="flex items-center space-x-2 text-blue-700 text-xs font-semibold uppercase tracking-wider">
-            <Lock className="w-4 h-4" />
+            <Lock className="w-4 h-4" aria-hidden="true" />
             <span>Privacy & Data Protection</span>
           </div>
           <h1 className="text-3xl font-bold text-slate-900 mt-2">Privacy Policy</h1>
           <p className="text-xs text-slate-500 mt-1">Effective date: October 2026</p>
         </div>
 
-        <div className="prose prose-slate max-w-none text-sm text-slate-700 space-y-6 leading-relaxed">
+        <article className="prose prose-slate max-w-none text-sm text-slate-700 space-y-6 leading-relaxed">
           <section className="space-y-2">
             <h2 className="text-lg font-bold text-slate-900">1. Information We Collect</h2>
-            <p>
-              When using Thesify, we collect:
-            </p>
+            <p>When using Thesify, we collect:</p>
             <ul className="list-disc list-inside space-y-1 pl-2">
-              <li><strong>Account Information:</strong> Full name, university or institution, faculty, academic department, and email address.</li>
-              <li><strong>Project Metadata:</strong> Research title, objectives, questions, hypotheses, and supervisor instructions.</li>
-              <li><strong>Research Datasets:</strong> Numerical survey data or experimental recordings uploaded for validation and statistical processing.</li>
+              <li>
+                <strong>Account Information:</strong> Full name, university or institution, faculty, academic department, and email address.
+              </li>
+              <li>
+                <strong>Project Metadata:</strong> Research title, objectives, questions, hypotheses, and supervisor instructions.
+              </li>
+              <li>
+                <strong>Research Datasets:</strong> Numerical survey data or experimental recordings uploaded for validation and statistical processing.
+              </li>
             </ul>
           </section>
 
@@ -56,10 +76,14 @@ export default function PrivacyPage() {
           <section className="space-y-2">
             <h2 className="text-lg font-bold text-slate-900">5. Contact Information</h2>
             <p>
-              For inquiries regarding data retention or account deletion, contact our privacy officer at <span className="text-blue-700 font-medium">privacy@thesify.ng</span>.
+              For inquiries regarding data retention or account deletion, contact our privacy officer at{' '}
+              <a href="mailto:privacy@thesify.ng" className="text-blue-700 font-medium hover:underline">
+                privacy@thesify.ng
+              </a>
+              .
             </p>
           </section>
-        </div>
+        </article>
       </div>
     </div>
   );
