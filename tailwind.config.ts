@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -23,6 +24,7 @@ const config: Config = {
           950: "#0c1a30",
         },
         navy: {
+          950: "#070e1b",
           900: "#0b192c",
           800: "#102a45",
           700: "#1e3e62",
@@ -35,6 +37,7 @@ const config: Config = {
         },
         amber: {
           50: "#fffbeb",
+          500: "#f59e0b",
           700: "#b45309",
           800: "#92400e",
         }
@@ -45,7 +48,27 @@ const config: Config = {
       },
       borderRadius: {
         button: "6px",
-      }
+      },
+      animation: {
+        'float-slow': 'float 6s ease-in-out infinite',
+        'float-delayed': 'float 7s ease-in-out 2s infinite',
+        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
+        'spin-slow': 'spin 20s linear infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-12px)' },
+        },
+        pulseGlow: {
+          '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+          '50%': { opacity: '0.8', transform: 'scale(1.05)' },
+        },
+      },
+      perspective: {
+        '1000': '1000px',
+        '2000': '2000px',
+      },
     },
   },
   plugins: [],
